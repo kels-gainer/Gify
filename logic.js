@@ -1,24 +1,20 @@
 
 var topics = ["happy", "sad", "angry", "sleepy", "confused", "embarrassed", "excited"];
 
-
-for (var i = 0; i < topics.length; i++) { 
-  var buttons = $("<button>"+ topics[i] + "</button>").addClass("btn btn-warning").attr("data-reactions",topics[i]) 
-    buttons.appendTo("#topics");   
-} 
-
-$("button").on("click", function() {
+$("#topics").on("click", function(event) {
     event.preventDefault()
     var reactions = $(this).attr("data-reactions")
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + reactions + "&api_key=9pXQX6q74rCUkPxXzVLM0XOEmiBjOetY";
+    console.log("api working");
+    
     
     $.ajax({
         url: queryURL,
         method: "GET"
     })
     .then(function(response) {
+
         var results = response.data;
-        
 
         for (var i = 0; i < results.length; i++) {
 
@@ -43,6 +39,18 @@ $("button").on("click", function() {
 
 });
 
+function renderButtons() {
+    $("#topics").empty();
+
+    for (var i = 0; i < topics.length; i++) { 
+        var buttons = $("<button>"+ topics[i] + "</button>").attr("data-reactions",topics[i]) 
+          buttons.appendTo("#topics");
+        }
+        console.log("render buttons working");
+        
+}
+
+
 $("#gifs").on("click", ".gif", function(event){
 	event.preventDefault();
 	
@@ -61,10 +69,10 @@ $("#gifs").on("click", ".gif", function(event){
 $("#add-reaction").on("click", function(event) {
     event.preventDefault();
 
-    var react = $("#reactions-input").val().trim();
+    var reactions = $("#reactions-input").val().trim();
 
-    ractions.push(react);
-    console.log(react);
+    topics.push(reactions);
+    console.log("add reactions working");
     renderButtons();
   });
 
