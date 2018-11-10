@@ -1,11 +1,11 @@
 
 var topics = ["happy", "sad", "angry", "sleepy", "confused", "embarrassed", "excited"];
 
-$("#topics").on("click", function(event) {
+$("#topics").on("click", function() {
     event.preventDefault()
     var reactions = $(this).attr("data-reactions")
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + reactions + "&api_key=9pXQX6q74rCUkPxXzVLM0XOEmiBjOetY";
-    console.log("api working");
+    console.log("gifs button working");
     
     
     $.ajax({
