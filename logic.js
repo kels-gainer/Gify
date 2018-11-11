@@ -1,4 +1,3 @@
-
 var topics = ["happy", "sad", "angry", "sleepy", "confused", "embarrassed", "excited"];
 
 $("#topics").on("click", function() {
@@ -77,5 +76,3 @@ $("#add-reaction").on("click", function(event) {
   });
 
 renderButtons();
-
-

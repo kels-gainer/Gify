@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    <title>Gify Pop-Ups</title>
 </head>
 <body>
 
-    <div id="topics">
+    <div class="container">
+        <div class="row">
+            <div class="col-12-lg title">
+                <h1>TITLE HERE</h1>
+                <p  class="text">Choose a reaction gif from the list or add your own!</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12-lg buttons topics-row">
+                <div id="topics"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12-lg">
+                <form id="topics-form">
+                    <label for="reactions-input">Choose A Reaction</label>
+                    <br>
+                    <input class="form-style" id="reactions-input" type="text" placeholder="How do you want to express yourself?">
+                            
+                    <input id="add-reaction" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     </div>
-
-    <form id="topics-form">
-        <label for="reactions-input">Choose A Reaction</label>
-        <input id="reactions-input" type="text">
-        
-        <input id="add-reaction" type="submit" value="Submit">
-    </form>
     
-
-    <div id="gifs">
-    </div>
+    <div id="gifs"></div>
 
     <script type="text/javascript" src="logic.js"></script>
     
