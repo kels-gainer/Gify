@@ -1,6 +1,6 @@
 var topics = ["happy", "sad", "angry", "sleepy", "confused", "embarrassed", "excited"];
 
-$("#topics").on("click", function() {
+$(document).on("click", ".special-button-class", function() { 
     event.preventDefault()
     var reactions = $(this).attr("data-reactions")
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + reactions + "&api_key=9pXQX6q74rCUkPxXzVLM0XOEmiBjOetY";
@@ -42,28 +42,13 @@ function renderButtons() {
     $("#topics").empty();
 
     for (var i = 0; i < topics.length; i++) { 
-        var buttons = $("<button>"+ topics[i] + "</button>").attr("data-reactions",topics[i]) 
-          buttons.appendTo("#topics");
+        var buttons = $("<button>"+ topics[i] + "</button>")
+			.attr("data-reactions",topics[i]) 
+			.addClass('special-button-class')
+          	.appendTo("#topics");
         }
-        console.log("render buttons working");
-        
 }
 
-
-$("#gifs").on("click", ".gif", function(event){
-	event.preventDefault();
-	
-	var state = $(this).attr("data-state");
-	
-	if (state === "still") {
-    $(this).attr("src", $(this).attr("data-animate"));
-    $(this).attr("data-state", "animate");
-  } else {
-    $(this).attr("src", $(this).attr("data-still"));
-    $(this).attr("data-state", "still");
-  }
-
-})
 
 $("#add-reaction").on("click", function(event) {
     event.preventDefault();

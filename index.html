@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree|Bungee" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    <title>Gify Pop-Ups</title>
 </head>
 <body>
 
     <div class="container">
-        <div class="row">
-            <div class="col-12-lg title">
-                <h1>TITLE HERE</h1>
+        <div class="row row-title">
+            <div class="col-6-lg">
+                <h1 class="title">REACTION GIFS</h1>
                 <p  class="text">Choose a reaction gif from the list or add your own!</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12-lg buttons topics-row">
-                <div id="topics"></div>
+            <div class="row">
+                <div class="col-6-lg button-style topics-row">
+                    <div id="topics"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6-lg">
+                    <form id="topics-form" class="search-style">
+                        <label for="reactions-input">Choose A Reaction</label>
+                        <br>
+                        <input class="form-style" id="reactions-input" type="text" placeholder="How do you want to express yourself?">
+                                    
+                        <input id="add-reaction" type="submit" value="Submit">
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12-lg">
-                <form id="topics-form">
-                    <label for="reactions-input">Choose A Reaction</label>
-                    <br>
-                    <input class="form-style" id="reactions-input" type="text" placeholder="How do you want to express yourself?">
-                            
-                    <input id="add-reaction" type="submit" value="Submit">
-                </form>
+
+    </div>
+    <div class="row">
+        <div class="col-6-lg gif-style">
+            <div id="gifs" class="card-deck card-columns">
             </div>
         </div>
     </div>
-    
-    <div id="gifs"></div>
 
     <script type="text/javascript" src="logic.js"></script>
     
