@@ -4,15 +4,15 @@ Gify is the assignment that uses the GIPHY API to create a dynamic web page that
 
 The page has a series of buttons preassigned that the user can choose from 
 
-![alt text](images/main.png)
+![alt text](images/new-ex.png)
 
 or a button can be added by typing the desired term in the input and hitting enter.
 
-![alt text](images/example.png)
+![alt text](images/new-ex2.png)
 
 Once the button is added the user can click it and the gif corresponding with that term will appear.
 
-![alt text](images/example2.png)
+![alt text](images/new-ex3.png)
 
 - - -
 
@@ -21,5 +21,5 @@ Once the button is added the user can click it and the gif corresponding with th
 * JQuery
 * GIPHY API
 * Ajax - for api calls
-* Bootstrap css 
-* Custom - html, css, javascript
+* Bulma
+* Custom - HTML5, CSS3, Javascript

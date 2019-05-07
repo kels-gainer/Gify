@@ -1,0 +1,140 @@
+body {
+    background-color: #f8f8f8;
+}
+
+header {
+    background-image:linear-gradient(to right, #F90C4D , #FF5733); 
+    width: auto;
+    height: 100px;
+    align-content: center;
+}
+
+h1 {
+    font-size: 115px;
+    text-align: center;
+    font-family: 'Bungee', cursive;
+    color: #f8f8f8;
+}
+
+p {
+    font-size: 15px;
+    color: #FF5733;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    text-transform: capitalize;
+    margin-left: 20px;
+    margin-top: 35px;
+}
+
+.tag {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #F90C4D;
+    margin-top: 45px;
+}
+
+.special-button-class {
+    width: 120px;
+    height: 35px;
+    border-radius: 100px;
+    border-style: none;
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    background-color:#212a37;
+    color: #f8f8f8;
+    margin-top: 35px;
+    margin: 15px;
+
+}
+
+.special-button-class:hover {
+    background-color: #8dc6bf;
+}
+
+.special-button-class:focus {
+    outline:0;
+}
+
+.topics-row {
+    align-content: center;
+    width: auto;
+    padding: 15px;
+    margin-left: 15px;
+}
+
+.input-row {
+    margin-top: 55px;
+}
+
+.input {
+    width: 980px;
+    height: 33px;
+    padding: 5px;
+    align-content: center;
+}
+
+.button {
+    border-radius: none;
+    font-family: 'Bai Jamjuee', sans-serif;
+    margin: none;
+    background-color:#212a37;
+    color: #f8f8f8;
+    border-style: none;
+    padding: 2px;
+    width: 120px;
+    height: 30px;
+
+}
+
+.button:hover {
+    background-color: #8dc6bf;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+
+.column.is-full {
+    flex: none;
+    width: 100%;
+}
+
+.search-style {
+    margin-left: 75px;
+}
+.form-style {
+    width: 700px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    padding-left: 10px;
+}
+
+.gif-style {
+    margin: 35px;
+    margin-left: 55px;
+    float: left;
+    align-content: center;
+    padding: 20px;
+}
+.gif {
+    margin: 15px;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+}
+
+.main-col {
+    margin-left: 100px;
+}
+
+.card-columns {
+    margin: 15px;
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 4;
+    }
+  }
